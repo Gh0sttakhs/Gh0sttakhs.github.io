@@ -93,14 +93,14 @@ nav a:hover {
 /* Hero Section με Hacking Background */
 /* --- HERO SECTION FIX --- */
 #hero {
-    height: 100vh; /* Πιάνει όλη την οθόνη */
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Η εικόνα Matrix */
-    background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hrRJ45Q29t7t8Z35uM/giphy.gif') no-repeat center center/cover;
+    /* ΤΩΡΑ ΔΙΑΒΑΖΕΙ ΤΟ ΤΟΠΙΚΟ ΣΟΥ ΑΡΧΕΙΟ */
+    background: url('matrix.gif') no-repeat center center/cover; 
     border-bottom: 2px solid var(--accent-color);
 }
 
