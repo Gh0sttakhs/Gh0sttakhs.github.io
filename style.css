@@ -91,38 +91,42 @@ nav a:hover {
 }
 
 /* Hero Section με Hacking Background */
+/* --- HERO SECTION FIX --- */
 #hero {
-    height: 90vh;
+    height: 100vh; /* Πιάνει όλη την οθόνη */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Εικόνα background σχετική με hacking/matrix */
-    background: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
-    border-bottom: 1px solid var(--accent-color);
+    /* Η εικόνα Matrix */
+    background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5a3Z5aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hrRJ45Q29t7t8Z35uM/giphy.gif') no-repeat center center/cover;
+    border-bottom: 2px solid var(--accent-color);
 }
 
-/* Ένα σκούρο/κόκκινο φίλτρο πάνω από την εικόνα για να διαβάζονται τα γράμματα */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85); /* Πολύ σκούρο φίλτρο */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(20, 0, 0, 0.8));
+    background: rgba(0, 0, 0, 0.85); /* Σκοτεινό φίλτρο */
+    z-index: 1; /* Layer 1: Πίσω */
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10; /* Layer 10: ΤΕΡΜΑ ΜΠΡΟΣΤΑ (Πάνω από το φίλτρο) */
+    width: 100%;
+    padding: 0 20px;
 }
 
 .terminal-text {
     font-family: var(--font-code);
     color: var(--accent-color);
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: block; /* Σιγουριά ότι εμφανίζεται */
 }
 
 #hero h2 {
