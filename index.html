@@ -1,65 +1,67 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gh0sttakhs | Personal Portfolio</title>
+    <title>Gh0sttakhs | Security & Dev Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>Gh0sttakhs<span class="dot">.</span></h1>
+        <div class="container nav-container">
+            <h1 class="logo">Gh0sttakhs<span class="accent">.</span></h1>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">/$ About</a></li>
+                    <li><a href="#projects">/$ Projects</a></li>
+                    <li><a href="#contact">/$ Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section id="hero">
-        <div class="hero-content">
-            <h2>Γεια, είμαι ο Gh0sttakhs</h2>
-            <p>Φοιτητής Πληροφορικής & Tech Enthusiast</p>
-            <a href="#projects" class="btn">Δες τα έργα μου</a>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <p class="terminal-text">> Initiating system...</p>
+            <h2>Hello, friend. I'm <span class="accent">Gh0sttakhs</span></h2>
+            <p>Computer Science Student | RISC-V Enthusiast | Aspiring Developer</p>
+            <a href="#projects" class="btn">View Repositories_</a>
         </div>
     </section>
 
-    <section id="about" class="container">
-        <h3>Σχετικά με εμένα</h3>
-        <p>Καλώς ήρθατε στην προσωπική μου ιστοσελίδα. Εδώ ανεβάζω τα projects μου και σημειώσεις από τη σχολή (RISC-V, Logic Design κ.α.). Μου αρέσει ο προγραμματισμός και το Web Development.</p>
+    <section id="about" class="container section-padding">
+        <h3 class="section-title">/$ whoami</h3>
+        <div class="about-content">
+            <p>Welcome to my digital footprint. I am a Computer Science student passionate about low-level systems, logic design, and software development. This portfolio is connected directly to my GitHub, showcasing my current work in areas like RISC-V architecture and web technologies.</p>
+        </div>
     </section>
 
-    <section id="projects" class="container">
-        <h3>Τα Projects μου</h3>
-        <div class="project-grid">
-            <div class="card">
-                <h4>Project 1</h4>
-                <p>Περιγραφή του πρώτου project.</p>
-            </div>
-            <div class="card">
-                <h4>Project 2</h4>
-                <p>Περιγραφή του δεύτερου project.</p>
-            </div>
-            <div class="card">
-                <h4>Project 3</h4>
-                <p>Περιγραφή του τρίτου project.</p>
+    <section id="projects" class="container section-padding">
+        <h3 class="section-title">/$ ls -la ~/projects</h3>
+        <p style="text-align: center; margin-bottom: 20px;">Fetching latest public repositories from GitHub API...</p>
+        
+        <div id="repo-container" class="project-grid">
+            <div class="loading icon-spinner text-center">
+                <i class="fas fa-spinner fa-spin fa-3x accent"></i>
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <p>Βρείτε με στο GitHub</p>
-        <div class="socials">
-            <a href="https://github.com/Gh0sttakhs" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="container">
+            <h3>/$ Connect</h3>
+            <p>Find me on the network.</p>
+            <div class="socials">
+                <a href="https://github.com/Gh0sttakhs" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            <p class="copyright">&copy; 2026 Gh0sttakhs_</p>
         </div>
-        <p>&copy; 2024 Gh0sttakhs</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
