@@ -13,10 +13,18 @@ async function getRepos() {
         // Καθαρίζουμε το εικονίδιο φόρτωσης (spinner)
         repoContainer.innerHTML = '';
 
-        // Φιλτράρουμε τα repos: Κρατάμε μόνο αυτά που ΔΕΝ είναι forks (δηλαδή τα δικά σου έργα)
-        const myRepos = data.filter(repo => !repo.fork);
+        // --- ΕΔΩ ΕΓΙΝΕ Η ΑΛΛΑΓΗ ---
+        // Φιλτράρουμε τα repos: 
+        // 1. !repo.fork: Κρατάμε αυτά που ΔΕΝ είναι forks
+        // 2. && repo.name !== ... : Αποκλείουμε τα συγκεκριμένα ονόματα
+        const myRepos = data.filter(repo => 
+            !repo.fork && 
+            repo.name !== 'Gh0sttakhs' && 
+            repo.name !== 'Gh0sttakhs.github.io'
+        );
+        // ------------------------
 
-        // Αν δεν βρεθούν projects
+        // Αν δεν βρεθούν projects (μετά το φιλτράρισμα)
         if (myRepos.length === 0) {
              repoContainer.innerHTML = '<p>No public repositories found.</p>';
              return;
@@ -59,5 +67,5 @@ async function getRepos() {
     }
 }
 
-// Καλλούμε τη συνάρτηση όταν φορτώσει η σελίδα
+// Καλούμε τη συνάρτηση όταν φορτώσει η σελίδα
 getRepos();
